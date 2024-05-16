@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgya8ys5ahrgr"]
+
+[ext_resource type="PackedScene" uid="uid://c8g27oks76n2i" path="res://scenes/mundo.tscn" id="1_a26jq"]
+[ext_resource type="PackedScene" uid="uid://ch5d3mpg44v7t" path="res://scenes/scorpion.tscn" id="2_2gwl6"]
+
+[node name="jogo" type="Node2D"]
+
+[node name="mundo" parent="." instance=ExtResource("1_a26jq")]
+position = Vector2(0, -3)
+
+[node name="scorpion" parent="." instance=ExtResource("2_2gwl6")]
+position = Vector2(333, -12)

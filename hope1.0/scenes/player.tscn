@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://vlvpv0x8c1sp"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_wl4dk"]
+[ext_resource type="Texture2D" uid="uid://cff0npus2f2wv" path="res://assets/Sprites Player/Idle.png" id="2_6unw1"]
+[ext_resource type="Texture2D" uid="uid://bvi0flkan0c6x" path="res://assets/Sprites Player/run.png" id="2_85afv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crq07"]
+atlas = ExtResource("2_6unw1")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2prv5"]
+atlas = ExtResource("2_6unw1")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4cpx"]
+atlas = ExtResource("2_85afv")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p750b"]
+atlas = ExtResource("2_85afv")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxxc2"]
+atlas = ExtResource("2_85afv")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wey2y"]
+atlas = ExtResource("2_85afv")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4aqam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crq07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2prv5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4cpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p750b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxxc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wey2y")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wafhu"]
+radius = 5.0
+height = 24.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wl4dk")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4aqam")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.844829
+
+[node name="Colisão" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_wafhu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
