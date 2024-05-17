@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -290.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animation:AnimatedSprite2D = $Sprite
-
+@export var inv:Inv
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():

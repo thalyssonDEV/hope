@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ch5d3mpg44v7t"]
 
 [ext_resource type="Texture2D" uid="uid://cbo4kori6w188" path="res://assets/Sprites Enemies/Scorpion/Scorpion_idle.png" id="1_cgpds"]
-[ext_resource type="Script" path="res://scenes/scorpion.gd" id="1_g4pov"]
+[ext_resource type="Script" path="res://scorpion.gd" id="1_g4pov"]
 [ext_resource type="PackedScene" uid="uid://bbhy0p10t41l2" path="res://scenes/killzone.tscn" id="2_5qnrh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxqhr"]
