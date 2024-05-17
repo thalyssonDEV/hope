@@ -45,6 +45,8 @@ radius = 1.24363
 height = 12.0089
 
 [node name="scorpion" type="Node2D"]
+visibility_layer = 2
+position = Vector2(1, 0)
 script = ExtResource("1_g4pov")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -64,5 +66,5 @@ target_position = Vector2(-14, 0)
 
 [node name="esquerda" type="RayCast2D" parent="."]
 position = Vector2(5, 19)
-target_position = Vector2(20, 2)
+target_position = Vector2(24, 0)
 collision_mask = 2
