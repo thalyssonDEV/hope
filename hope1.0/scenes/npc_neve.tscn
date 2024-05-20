@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://fdowui051kui"]
+
+[ext_resource type="Texture2D" uid="uid://ce4ha64p1pwy5" path="res://assets/Sprites Npc's/Sprites Npc_s/Idle_npc_neve.png" id="1_yuvr4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0swup"]
+atlas = ExtResource("1_yuvr4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8px5"]
+atlas = ExtResource("1_yuvr4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd8uv"]
+atlas = ExtResource("1_yuvr4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fhpm"]
+atlas = ExtResource("1_yuvr4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0uyk"]
+atlas = ExtResource("1_yuvr4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdhh1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0swup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8px5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd8uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fhpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0uyk")
+}],
+"loop": true,
+"name": &"idle_npc_neve",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_76m4c"]
+radius = 18.0
+height = 60.0
+
+[node name="npc_neve" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.65, 0.65)
+sprite_frames = SubResource("SpriteFrames_mdhh1")
+animation = &"idle_npc_neve"
+autoplay = "idle_npc_neve"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 18)
+shape = SubResource("CapsuleShape2D_76m4c")
