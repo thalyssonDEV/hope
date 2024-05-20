@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=3 uid="uid://dcl72p4yrbx5e"]
+
+[ext_resource type="Texture2D" uid="uid://go0xntlrckrm" path="res://assets/Sprites Enemies/Hyena/Hyena_idle.png" id="1_l7tvs"]
+[ext_resource type="PackedScene" uid="uid://cgr68t8vb1joo" path="res://scenes/killzone.tscn" id="2_bs1ly"]
+[ext_resource type="Texture2D" uid="uid://6xhn2lgvv4da" path="res://assets/Sprites Enemies/Hyena/Hyena_run.png" id="2_odbxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66fc3"]
+atlas = ExtResource("1_l7tvs")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuo6f"]
+atlas = ExtResource("1_l7tvs")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u642d"]
+atlas = ExtResource("1_l7tvs")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xb5y"]
+atlas = ExtResource("1_l7tvs")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq7qp"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2262i"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvio6"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74bd2"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm32d"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrfhx"]
+atlas = ExtResource("2_odbxp")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yx0kx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66fc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuo6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u642d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xb5y")
+}],
+"loop": true,
+"name": &"idle_hyena",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq7qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2262i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvio6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74bd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm32d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrfhx")
+}],
+"loop": true,
+"name": &"run_hyena",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hktg7"]
+size = Vector2(26.1875, 14.25)
+
+[node name="Hyena" type="Node2D"]
+texture_filter = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -17)
+scale = Vector2(0.72, 0.72)
+sprite_frames = SubResource("SpriteFrames_yx0kx")
+animation = &"idle_hyena"
+autoplay = "idle_hyena"
+frame_progress = 0.570271
+
+[node name="Killzone" parent="." instance=ExtResource("2_bs1ly")]
+collision_layer = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-0.09375, -7.125)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_hktg7")
