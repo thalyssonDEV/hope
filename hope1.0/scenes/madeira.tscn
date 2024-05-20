@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx5i7dhxsmk4p"]
+
+[ext_resource type="Texture2D" uid="uid://cx6nh5mvbh22s" path="res://assets/Objetos/3 Objects2.0/madeira_hd.png" id="1_xocud"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2sfxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xocud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dhum"]
+size = Vector2(96, 65)
+
+[node name="madeira" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_2sfxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1.5)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_7dhum")
