@@ -8,7 +8,7 @@ func _ready():
 	close()
 
 func  _process(delta):
-	if Input.is_action_just_pressed("f"):
+	if Input.is_action_just_pressed("]}[rendering]textures/canvas_textures/default_texture_filter"):
 		if is_open:
 			close()
 		else:
