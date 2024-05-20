@@ -664,7 +664,7 @@ position = Vector2(62, -106)
 position = Vector2(97, -88)
 
 [node name="madeira5" parent="." instance=ExtResource("10_13g42")]
-position = Vector2(171, -97)
+position = Vector2(164, -99)
 
 [node name="madeira6" parent="." instance=ExtResource("10_13g42")]
 position = Vector2(200, -115)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://c8g27oks76n2i"]
+[gd_scene load_steps=66 format=3 uid="uid://c8g27oks76n2i"]
 
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="2_3vehv"]
 [ext_resource type="PackedScene" uid="uid://vlvpv0x8c1sp" path="res://scenes/player.tscn" id="2_6rvpy"]
@@ -31,7 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://dgj7dxur1ftb7" path="res://assets/1 Tiles/bloco_corro1.png" id="27_7cj3c"]
 [ext_resource type="Texture2D" uid="uid://dyxo8et3qf5rk" path="res://assets/Objetos/3 Objects2.0/Ridges/4.png" id="27_l8bb5"]
 [ext_resource type="Texture2D" uid="uid://unevjkfbhyn1" path="res://assets/Objetos/3 Objects2.0/Trees/1.png" id="28_pkdd8"]
-[ext_resource type="PackedScene" uid="uid://fdowui051kui" path="res://scenes/npc_neve.tscn" id="32_yarsb"]
+[ext_resource type="PackedScene" uid="uid://ct25x5ykmo8jw" path="res://scenes/ui.tscn" id="30_jy6kk"]
+[ext_resource type="PackedScene" uid="uid://b6x38e1c038v5" path="res://scenes/npc_neve.tscn" id="32_yarsb"]
 [ext_resource type="PackedScene" uid="uid://dcl72p4yrbx5e" path="res://scenes/hyena.tscn" id="33_o30sv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i4gb"]
@@ -1048,7 +1049,7 @@ sources/1 = SubResource("TileSetAtlasSource_xmjw3")
 
 [node name="Cenário" type="TileMap" parent="."]
 texture_filter = 1
-position = Vector2(6, -1)
+position = Vector2(7, -1)
 scale = Vector2(1.00192, 1)
 tile_set = SubResource("TileSet_iaggx")
 format = 2
@@ -1057,11 +1058,12 @@ layer_0/tile_data = PackedInt32Array(131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65
 layer_1/name = "Decoração"
 layer_1/tile_data = PackedInt32Array(8, 131087, 7, -65528, 131087, 6, 9, 196623, 7, -65527, 196623, 6, -131064, 131087, 5, -131065, 65551, 5, -196601, 65551, 4, -196600, 131087, 4, -196599, 196623, 4, -131063, 196623, 5, -196598, 262159, 4, -262135, 196623, 3, -262136, 131087, 3, -262137, 65551, 3, -327672, 131087, 2, -327673, 65551, 2, -327674, 15, 2, -262138, 15, 3, -393210, 15, 1, -393209, 65551, 1, -458746, 15, 0, -458745, 65551, 0, -458744, 131087, 0, -458743, 196623, 0, -393208, 131087, 1, -393207, 196623, 1, -327671, 196623, 2, -393206, 262159, 1, -327670, 262159, 2, -262134, 262159, 3, -393205, 327695, 1, -327669, 327695, 2, -262133, 327695, 3, -196597, 327695, 4, 12, 25, 0, 13, 65561, 0, 14, 131097, 0, 16, 26, 0, 17, 65562, 0, 18, 131098, 0, 65534, 27, 0, 33, 65564, 9, 34, 131100, 9, 35, 196636, 9, 36, 262172, 9, 37, 327708, 9, -262110, 131100, 5, -131038, 131100, 7, -65502, 131100, 8, -262109, 196636, 5, -196573, 196636, 6, -131037, 196636, 7, -65501, 196636, 8, -262108, 262172, 5, -196572, 262172, 6, -131036, 262172, 7, -65500, 262172, 8, -262107, 327708, 5, -196571, 327708, 6, -65499, 327708, 8, -262106, 393244, 5, -327646, 131100, 4, -327645, 196636, 4, -327644, 262172, 4, -327643, 327708, 4, -327642, 393244, 4, -327641, 458780, 4, -262105, 458780, 5, -393177, 458780, 3, -458713, 458780, 2, -458714, 393244, 2, -524249, 458780, 1, -524250, 393244, 1, -589786, 393244, 0, -589787, 327708, 0, -327647, 65564, 4, -327648, 28, 4, -262112, 28, 5, -196576, 28, 6, -262111, 65564, 5, -393184, 28, 3, -458720, 28, 2, -393183, 65564, 3, -458719, 65564, 2, -524255, 65564, 1, -393182, 131100, 3, -458718, 131100, 2, -524254, 131100, 1, -393181, 196636, 3, -393180, 262172, 3, -393179, 327708, 3, -393178, 393244, 3, -458715, 327708, 2, -458716, 262172, 2, -458717, 196636, 2, -524253, 196636, 1, -524252, 262172, 1, -524251, 327708, 1, -589790, 131100, 0, -589789, 196636, 0, -589788, 262172, 0, -196569, 458780, 6)
 layer_2/name = "water"
-layer_2/z_index = 1
+layer_2/z_index = 6
 layer_2/tile_data = PackedInt32Array(65558, 30, 0, 65559, 65566, 0, 131094, 30, 1, 131095, 65566, 1, 196630, 0, 1, 196631, 0, 1, 65556, 12, 0, 65557, 12, 0, 65560, 12, 0, 65561, 12, 0, 65562, 12, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_6rvpy")]
 light_mask = 2
+z_index = 5
 position = Vector2(0, 1)
 
 [node name="apples" type="Node" parent="."]
@@ -1095,8 +1097,12 @@ texture_filter = 1
 position = Vector2(639, -76)
 
 [node name="npc_neve" parent="." instance=ExtResource("32_yarsb")]
-position = Vector2(1069, -8)
-scale = Vector2(0.55, 0.55)
+texture_filter = 1
+position = Vector2(1084, 8)
+scale = Vector2(0.5, 0.5)
 
 [node name="Hyena" parent="." instance=ExtResource("33_o30sv")]
 position = Vector2(4, -144)
+
+[node name="UI" parent="." instance=ExtResource("30_jy6kk")]
+visible = false

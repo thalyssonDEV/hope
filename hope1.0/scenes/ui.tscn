@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct25x5ykmo8jw"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_6gnlr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckw8r"]
+line_spacing = 8.0
+font_size = 35
+font_color = Color(0.771579, 0.00398783, 0.080342, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_6gnlr")
+metadata/_edit_vertical_guides_ = [1152.0]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 338.0
+offset_top = 200.0
+offset_right = -287.0
+offset_bottom = 370.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 21.0
+offset_right = 1.0
+offset_bottom = 135.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_ckw8r")
+horizontal_alignment = 1
+vertical_alignment = 1
