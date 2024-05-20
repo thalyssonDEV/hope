@@ -1073,6 +1073,7 @@ texture_filter = 1
 position = Vector2(153, -94)
 
 [node name="apple2" parent="apples" instance=ExtResource("14_e1a1t")]
+texture_filter = 1
 position = Vector2(178, -71)
 
 [node name="apple3" parent="apples" instance=ExtResource("14_e1a1t")]
