@@ -103,8 +103,8 @@ frame_progress = 0.570271
 
 [node name="Killzone" parent="." instance=ExtResource("2_bs1ly")]
 collision_layer = 2
+collision_mask = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-0.09375, -7.125)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hktg7")
