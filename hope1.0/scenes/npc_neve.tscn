@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_npc_neve",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3al1a"]
@@ -66,6 +66,8 @@ position = Vector2(-1, -31)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_mrpca")
 animation = &"idle_npc_neve"
+autoplay = "idle_npc_neve"
+frame_progress = 0.117132
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, -13)
