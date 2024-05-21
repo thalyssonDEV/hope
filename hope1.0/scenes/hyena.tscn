@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dcl72p4yrbx5e"]
 
+[ext_resource type="Script" path="res://scripts/Hyena de vdd.gd" id="1_a7t0y"]
 [ext_resource type="Texture2D" uid="uid://go0xntlrckrm" path="res://assets/Sprites Enemies/Hyena/Hyena_idle.png" id="1_l7tvs"]
-[ext_resource type="PackedScene" uid="uid://cgr68t8vb1joo" path="res://scenes/killzone.tscn" id="2_bs1ly"]
 [ext_resource type="Texture2D" uid="uid://6xhn2lgvv4da" path="res://assets/Sprites Enemies/Hyena/Hyena_run.png" id="2_odbxp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66fc3"]
@@ -87,24 +87,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hktg7"]
-size = Vector2(26.1875, 14.25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx6tw"]
+size = Vector2(22, 14)
 
 [node name="Hyena" type="Node2D"]
 texture_filter = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Hyena de vdd" type="CharacterBody2D" parent="."]
+script = ExtResource("1_a7t0y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hyena de vdd"]
 position = Vector2(-1, -17)
 scale = Vector2(0.72, 0.72)
 sprite_frames = SubResource("SpriteFrames_yx0kx")
 animation = &"idle_hyena"
 autoplay = "idle_hyena"
-frame_progress = 0.570271
+frame_progress = 0.558891
 
-[node name="Killzone" parent="." instance=ExtResource("2_bs1ly")]
-collision_layer = 2
-collision_mask = 1
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(-0.09375, -7.125)
-shape = SubResource("RectangleShape2D_hktg7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hyena de vdd"]
+position = Vector2(2, -7)
+shape = SubResource("RectangleShape2D_yx6tw")

@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b5lnmf85di27l" path="res://assets/Objetos/3 Objects2.0/Trees/2.png" id="7_8n5o6"]
 [ext_resource type="Texture2D" uid="uid://cx6nh5mvbh22s" path="res://assets/Objetos/3 Objects2.0/madeira_hd.png" id="8_m2jej"]
 [ext_resource type="Texture2D" uid="uid://crf6ftxc0wodf" path="res://assets/1 Tiles/bloco_corro2.png" id="9_bg8wv"]
-[ext_resource type="PackedScene" uid="uid://dx5i7dhxsmk4p" path="res://scenes/madeira.tscn" id="10_13g42"]
 [ext_resource type="PackedScene" uid="uid://ct25x5ykmo8jw" path="res://scenes/ui.tscn" id="12_eeisk"]
+[ext_resource type="PackedScene" uid="uid://dsp0ol55viio" path="res://scenes/apple_2.tscn" id="13_mhds8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgkdp"]
 texture = ExtResource("1_lxgju")
@@ -658,16 +658,7 @@ layer_1/tile_data = PackedInt32Array(-524287, 7, 0, -458751, 7, 1, -393215, 7, 2
 [node name="Player" parent="Cenario 2" instance=ExtResource("2_s26h4")]
 position = Vector2(-236, -15)
 
-[node name="madeira2" parent="." instance=ExtResource("10_13g42")]
-position = Vector2(62, -106)
-
-[node name="madeira3" parent="." instance=ExtResource("10_13g42")]
-position = Vector2(97, -88)
-
-[node name="madeira5" parent="." instance=ExtResource("10_13g42")]
-position = Vector2(164, -99)
-
-[node name="madeira6" parent="." instance=ExtResource("10_13g42")]
-position = Vector2(200, -115)
-
 [node name="UI" parent="." instance=ExtResource("12_eeisk")]
+
+[node name="apple2" parent="." instance=ExtResource("13_mhds8")]
+position = Vector2(276, -9)

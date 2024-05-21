@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://vlvpv0x8c1sp"]
+[gd_scene load_steps=14 format=3 uid="uid://vlvpv0x8c1sp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wl4dk"]
 [ext_resource type="Texture2D" uid="uid://cff0npus2f2wv" path="res://assets/Sprites Player/Idle.png" id="2_6unw1"]
 [ext_resource type="Texture2D" uid="uid://bvi0flkan0c6x" path="res://assets/Sprites Player/run.png" id="2_85afv"]
-[ext_resource type="Resource" uid="uid://djpj5un3bekqw" path="res://inventory/inventy_player.tres" id="2_p077r"]
 [ext_resource type="PackedScene" uid="uid://b2ecgccou4vtf" path="res://inventory/inv_ui.tscn" id="5_dcc37"]
 [ext_resource type="PackedScene" uid="uid://cfiyov7lltcvx" path="res://scenes/healthbar.tscn" id="6_r4v5f"]
 
@@ -67,9 +66,9 @@ radius = 5.0
 height = 24.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 3
+collision_layer = 5
+collision_mask = 7
 script = ExtResource("1_wl4dk")
-inv = ExtResource("2_p077r")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -93,7 +92,9 @@ offset_right = 65.0
 offset_bottom = -15.0
 
 [node name="Healthbar" parent="." instance=ExtResource("6_r4v5f")]
-offset_left = -12.0
-offset_top = -17.0
-offset_right = 12.0
-offset_bottom = -14.0
+offset_left = -13.0
+offset_top = -18.0
+offset_right = 11.0
+offset_bottom = -15.0
+
+[connection signal="mouse_entered" from="Healthbar" to="." method="_on_healthbar_mouse_entered"]

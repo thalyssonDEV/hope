@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name Player
 
 const SPEED = 150.0
@@ -9,14 +8,14 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animation:AnimatedSprite2D = $Sprite
-@export var inv:Inv
-@onready var healthbar = $Healthbar
+var inv:Inv = preload("res://inventory/inventy_player.tres")
+
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+	var can_move = !Global.uiNode.visible
 	# Handle jump.
 	if can_move:
 		if Input.is_action_just_pressed("jump") and is_on_floor():

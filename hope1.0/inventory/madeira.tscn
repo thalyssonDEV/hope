@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjh5glvmf2oup"]
+
+[ext_resource type="Script" path="res://madeira.gd" id="1_qvoxa"]
+[ext_resource type="Texture2D" uid="uid://cx6nh5mvbh22s" path="res://assets/Objetos/3 Objects2.0/madeira_hd.png" id="2_m6y1a"]
+[ext_resource type="Resource" uid="uid://e0qsspgn5sik" path="res://inventory/items_inventory/madeira.tres" id="2_yejmc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8v3a"]
+radius = 1.41421
+
+[node name="madeira" type="StaticBody2D"]
+script = ExtResource("1_qvoxa")
+item = ExtResource("2_yejmc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(0.0244444, 0.0188889)
+texture = ExtResource("2_m6y1a")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_u8v3a")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

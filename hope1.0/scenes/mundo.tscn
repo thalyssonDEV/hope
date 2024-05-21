@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://c8g27oks76n2i"]
+[gd_scene load_steps=67 format=3 uid="uid://c8g27oks76n2i"]
 
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="2_3vehv"]
 [ext_resource type="PackedScene" uid="uid://vlvpv0x8c1sp" path="res://scenes/player.tscn" id="2_6rvpy"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://dt1gg8h3ubqfa" path="res://assets/1 Tiles/Objetos/Pier_Tiles.png" id="11_ir3dj"]
 [ext_resource type="Texture2D" uid="uid://iy0gckhagf5v" path="res://assets/Objetos/3 Objects2.0/Grass/4.png" id="13_u7ynf"]
 [ext_resource type="Texture2D" uid="uid://cii2xn33q3u7u" path="res://assets/1 Tiles/Objetos/3 Objects2.0/Bushes/1.png" id="14_5cwiv"]
-[ext_resource type="PackedScene" uid="uid://cd6t4aoa7754u" path="res://scenes/apple.tscn" id="14_e1a1t"]
 [ext_resource type="Texture2D" uid="uid://cx3hjfmwogxvq" path="res://assets/1 Tiles/Objetos/3 Objects2.0/Bushes/2.png" id="15_b62yj"]
 [ext_resource type="Texture2D" uid="uid://fphq16oadwfe" path="res://assets/1 Tiles/Objetos/3 Objects2.0/Bushes/4.png" id="16_wls6m"]
 [ext_resource type="Texture2D" uid="uid://dlddnlx1gydma" path="res://assets/1 Tiles/Objetos/3 Objects2.0/Bushes/9.png" id="17_pwyoo"]
@@ -34,6 +33,8 @@
 [ext_resource type="PackedScene" uid="uid://ct25x5ykmo8jw" path="res://scenes/ui.tscn" id="30_jy6kk"]
 [ext_resource type="PackedScene" uid="uid://b6x38e1c038v5" path="res://scenes/npc_neve.tscn" id="32_yarsb"]
 [ext_resource type="PackedScene" uid="uid://dcl72p4yrbx5e" path="res://scenes/hyena.tscn" id="33_o30sv"]
+[ext_resource type="PackedScene" uid="uid://dsp0ol55viio" path="res://scenes/apple_2.tscn" id="35_34300"]
+[ext_resource type="PackedScene" uid="uid://bjh5glvmf2oup" path="res://inventory/madeira.tscn" id="35_qt07n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i4gb"]
 texture = ExtResource("2_l4xxl")
@@ -1065,37 +1066,6 @@ layer_2/tile_data = PackedInt32Array(65558, 30, 0, 65559, 65566, 0, 131094, 30, 
 light_mask = 2
 z_index = 5
 position = Vector2(0, 1)
-inv = null
-
-[node name="apples" type="Node" parent="."]
-
-[node name="apple" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(153, -94)
-
-[node name="apple2" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(178, -71)
-
-[node name="apple3" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(119, -89)
-
-[node name="apple4" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(542, -91)
-
-[node name="apple5" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(583, -123)
-
-[node name="apple7" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(527, 6)
-
-[node name="apple6" parent="apples" instance=ExtResource("14_e1a1t")]
-texture_filter = 1
-position = Vector2(639, -76)
 
 [node name="npc_neve" parent="." instance=ExtResource("32_yarsb")]
 texture_filter = 1
@@ -1107,3 +1077,20 @@ position = Vector2(4, -144)
 
 [node name="UI" parent="." instance=ExtResource("30_jy6kk")]
 visible = false
+
+[node name="apples" type="Node" parent="."]
+
+[node name="apple4" parent="apples" instance=ExtResource("35_34300")]
+position = Vector2(214, -17)
+
+[node name="apple2" parent="apples" instance=ExtResource("35_34300")]
+position = Vector2(176, 6)
+
+[node name="apple5" parent="apples" instance=ExtResource("35_34300")]
+position = Vector2(267, 5)
+
+[node name="apple3" parent="apples" instance=ExtResource("35_34300")]
+position = Vector2(329, 5)
+
+[node name="madeira" parent="." instance=ExtResource("35_qt07n")]
+position = Vector2(135, 5)

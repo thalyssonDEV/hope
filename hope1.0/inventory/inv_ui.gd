@@ -7,6 +7,7 @@ extends Control
 var is_open = false
 
 func _ready():
+	inv.update.connect(update_slots)
 	update_slots()
 	close()
 
@@ -15,7 +16,7 @@ func update_slots():
 		slots[i].update(inv.slots[i])
 
 func  _process(delta):
-	if Input.is_action_just_pressed("]}[rendering]textures/canvas_textures/default_texture_filter"):
+	if Input.is_action_just_pressed("inv"):
 		if is_open:
 			close()
 		else:

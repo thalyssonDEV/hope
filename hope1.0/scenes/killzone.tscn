@@ -5,9 +5,11 @@ script/source = "extends Area2D
 
 @onready var timer = $Timer
 
-func _on_body_exited(body):
+func _on_body_entered(body):
 	print(\"YOU DIED!\")
 	timer.start()
+
+
 
 
 func _on_timer_timeout():
