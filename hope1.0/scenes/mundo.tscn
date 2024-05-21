@@ -1065,6 +1065,7 @@ layer_2/tile_data = PackedInt32Array(65558, 30, 0, 65559, 65566, 0, 131094, 30, 
 light_mask = 2
 z_index = 5
 position = Vector2(0, 1)
+inv = null
 
 [node name="apples" type="Node" parent="."]
 
