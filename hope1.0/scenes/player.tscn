@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://vlvpv0x8c1sp"]
+[gd_scene load_steps=15 format=3 uid="uid://vlvpv0x8c1sp"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wl4dk"]
 [ext_resource type="Texture2D" uid="uid://cff0npus2f2wv" path="res://assets/Sprites Player/Idle.png" id="2_6unw1"]
 [ext_resource type="Texture2D" uid="uid://bvi0flkan0c6x" path="res://assets/Sprites Player/run.png" id="2_85afv"]
 [ext_resource type="Resource" uid="uid://djpj5un3bekqw" path="res://inventory/inventy_player.tres" id="2_p077r"]
 [ext_resource type="PackedScene" uid="uid://b2ecgccou4vtf" path="res://inventory/inv_ui.tscn" id="5_dcc37"]
+[ext_resource type="PackedScene" uid="uid://cfiyov7lltcvx" path="res://scenes/healthbar.tscn" id="6_r4v5f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_crq07"]
 atlas = ExtResource("2_6unw1")
@@ -90,3 +91,9 @@ offset_left = 1.0
 offset_top = -79.0
 offset_right = 65.0
 offset_bottom = -15.0
+
+[node name="Healthbar" parent="." instance=ExtResource("6_r4v5f")]
+offset_left = -12.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = -14.0
