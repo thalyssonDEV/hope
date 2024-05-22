@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bjl4v6occ0aq"]
+
+[ext_resource type="Texture2D" uid="uid://cbo4kori6w188" path="res://assets/Sprites Enemies/Scorpion/Scorpion_idle.png" id="1_7pthj"]
+[ext_resource type="Script" path="res://scripts/Scorpion de vdd.gd" id="1_syak8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7kox"]
+atlas = ExtResource("1_7pthj")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ppma"]
+atlas = ExtResource("1_7pthj")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kog4v"]
+atlas = ExtResource("1_7pthj")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sam7j"]
+atlas = ExtResource("1_7pthj")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uaoj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7kox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ppma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kog4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sam7j")
+}],
+"loop": true,
+"name": &"idle_scorpion",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15pc8"]
+size = Vector2(30, 13)
+
+[node name="Scorpion" type="Node2D"]
+
+[node name="Scorpion de vdd" type="CharacterBody2D" parent="."]
+script = ExtResource("1_syak8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Scorpion de vdd"]
+texture_filter = 1
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_uaoj6")
+animation = &"idle_scorpion"
+autoplay = "idle_scorpion"
+frame_progress = 0.857966
+
+[node name="Area2D" type="Area2D" parent="Scorpion de vdd"]
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scorpion de vdd/Area2D"]
+position = Vector2(6, -6.5)
+shape = SubResource("RectangleShape2D_15pc8")
+debug_color = Color(0.796791, 0.0859275, 0.258848, 0.42)
+
+[connection signal="body_entered" from="Scorpion de vdd/Area2D" to="Scorpion de vdd" method="_on_area_2d_body_entered"]

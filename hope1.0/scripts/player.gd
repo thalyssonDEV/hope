@@ -4,6 +4,11 @@ class_name Player
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
+## Quantidade de pontos de vida.
+var hp: int = 100;
+
+@onready var healthBar = get_node("Healthbar")
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -43,3 +48,11 @@ func player():
 
 func collect(item):
 	inv.insert(item)
+	
+## Função responsável por calcular o dano recebido.
+func takeDamage(amount):
+	healthBar._set_health(hp - amount)
+	hp -= amount;
+	if hp <= 0:
+		hp = 0;	
+		print("Morri.")
