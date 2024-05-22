@@ -93,7 +93,7 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_wafhu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
 limit_right = 1490
 position_smoothing_enabled = true
 

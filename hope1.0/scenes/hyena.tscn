@@ -84,7 +84,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_hyena",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yt26v"]
@@ -100,9 +100,9 @@ script = ExtResource("1_a7t0y")
 position = Vector2(-1, -17)
 scale = Vector2(0.72, 0.72)
 sprite_frames = SubResource("SpriteFrames_yx0kx")
-animation = &"idle_hyena"
-autoplay = "idle_hyena"
-frame_progress = 0.261653
+animation = &"run_hyena"
+autoplay = "run_hyena"
+frame_progress = 0.35531
 
 [node name="Area2D" type="Area2D" parent="Hyena de vdd"]
 
@@ -110,5 +110,15 @@ frame_progress = 0.261653
 position = Vector2(2, -7.5)
 shape = SubResource("RectangleShape2D_yt26v")
 debug_color = Color(0.997708, 0, 0.159847, 0.42)
+
+[node name="RayCast_right" type="RayCast2D" parent="Hyena de vdd"]
+position = Vector2(0, -8)
+target_position = Vector2(14, 0)
+collision_mask = 8
+
+[node name="RayCast_left" type="RayCast2D" parent="Hyena de vdd"]
+position = Vector2(0, -7)
+target_position = Vector2(-11, 0)
+collision_mask = 8
 
 [connection signal="body_entered" from="Hyena de vdd/Area2D" to="Hyena de vdd" method="_on_area_2d_body_entered"]

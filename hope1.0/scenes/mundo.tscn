@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://c8g27oks76n2i"]
+[gd_scene load_steps=72 format=3 uid="uid://c8g27oks76n2i"]
 
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="2_3vehv"]
 [ext_resource type="PackedScene" uid="uid://vlvpv0x8c1sp" path="res://scenes/player.tscn" id="2_6rvpy"]
@@ -37,7 +37,6 @@
 [ext_resource type="PackedScene" uid="uid://b6x38e1c038v5" path="res://scenes/npc_neve.tscn" id="32_yarsb"]
 [ext_resource type="PackedScene" uid="uid://dcl72p4yrbx5e" path="res://scenes/hyena.tscn" id="33_o30sv"]
 [ext_resource type="PackedScene" uid="uid://dsp0ol55viio" path="res://scenes/apple_2.tscn" id="35_34300"]
-[ext_resource type="PackedScene" uid="uid://bjh5glvmf2oup" path="res://inventory/madeira.tscn" id="35_qt07n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i4gb"]
 texture = ExtResource("2_l4xxl")
@@ -1047,7 +1046,8 @@ texture = ExtResource("32_pw07a")
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_iaggx"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 12
+physics_layer_0/collision_mask = 13
 sources/0 = SubResource("TileSetAtlasSource_4i4gb")
 sources/3 = SubResource("TileSetAtlasSource_dg5lv")
 sources/10 = SubResource("TileSetAtlasSource_o4oqk")
@@ -1134,9 +1134,3 @@ position = Vector2(572, -129)
 
 [node name="apple6" parent="apples" instance=ExtResource("35_34300")]
 position = Vector2(631, -88)
-
-[node name="madeira" parent="." instance=ExtResource("35_qt07n")]
-position = Vector2(133, 6)
-
-[node name="madeira2" parent="." instance=ExtResource("35_qt07n")]
-position = Vector2(223, 8)
