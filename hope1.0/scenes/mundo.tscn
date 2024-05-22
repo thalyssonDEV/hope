@@ -1083,6 +1083,7 @@ sources/4 = SubResource("TileSetAtlasSource_uecx0")
 sources/5 = SubResource("TileSetAtlasSource_nltmw")
 
 [node name="mundo" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1489.0]
 
 [node name="Cenário" type="TileMap" parent="."]
 texture_filter = 1
@@ -1136,3 +1137,6 @@ position = Vector2(631, -88)
 
 [node name="madeira" parent="." instance=ExtResource("35_qt07n")]
 position = Vector2(133, 6)
+
+[node name="madeira2" parent="." instance=ExtResource("35_qt07n")]
+position = Vector2(223, 8)
