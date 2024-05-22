@@ -20,6 +20,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		animation.play("jump")
 	var can_move = !Global.uiNode.visible
 	# Handle jump.
 	if can_move:
