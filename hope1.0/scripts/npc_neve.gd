@@ -22,7 +22,9 @@ func _on_body_entered(body):
 			"Caçadora: Desde que a terra se tornou inabitável por anos,
 			a radiação tomou conta de tudo, as criaturas vivas atualmente
 			não são muito amigáveis",
-			"Caçadora: De qualquer forma, elas não são o único problema, você
+			"Caçadora: Além disso, quase toda vegetação está morta, economize
+			se não quiser morrer de fome",
+			"Caçadora: De qualquer forma, você também
 			irá enfrentar um frio mortal, então certifique-se de ter alguma proteção",
 			"Caçadora: Tem certeza que vale a pena se arriscar
 			por algo incerto?, garoto",

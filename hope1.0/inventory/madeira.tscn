@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjh5glvmf2oup"]
 
-[ext_resource type="Script" path="res://madeira.gd" id="1_qvoxa"]
+[ext_resource type="Script" path="res://scripts/madeira.gd" id="1_qvoxa"]
 [ext_resource type="Texture2D" uid="uid://cx6nh5mvbh22s" path="res://assets/Objetos/3 Objects2.0/madeira_hd.png" id="2_m6y1a"]
 [ext_resource type="Resource" uid="uid://e0qsspgn5sik" path="res://inventory/items_inventory/madeira.tres" id="2_yejmc"]
 
