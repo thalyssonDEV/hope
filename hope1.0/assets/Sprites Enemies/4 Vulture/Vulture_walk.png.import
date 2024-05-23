@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi8lf2eyubusk"
-path="res://.godot/imported/Vulture_idle.png-604a289b771fcd75d4970bb2b364be96.ctex"
+uid="uid://cav4wlim4o6bf"
+path="res://.godot/imported/Vulture_walk.png-f67556b1d6449d135eac6138443f1330.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites Enemies/Vulture/Vulture_idle.png"
-dest_files=["res://.godot/imported/Vulture_idle.png-604a289b771fcd75d4970bb2b364be96.ctex"]
+source_file="res://assets/Sprites Enemies/4 Vulture/Vulture_walk.png"
+dest_files=["res://.godot/imported/Vulture_walk.png-f67556b1d6449d135eac6138443f1330.ctex"]
 
 [params]
 
