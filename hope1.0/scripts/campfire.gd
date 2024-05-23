@@ -9,8 +9,11 @@ func _on_body_entered(body):
 		var index  = procurarIndexSlot("madeira",slot)
 		print("Name item: ",slot[index].item.name," amount: ", slot[index].amount)
 		if slot[index].item.name == "madeira":
-			if slot[index].amount == madeira_camfire:
+			if slot[index].amount >= madeira_camfire:
 				animation_campfire.play("fire")
+			elif slot[index].amount < madeira_camfire:
+				get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+
 
 func procurarIndexSlot(name, slot):
 	for i in range(slot.size()):

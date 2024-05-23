@@ -14,6 +14,7 @@ func use_item(item: String):
 #função responsavel para o uso da maça
 func use_apple():
 	print('use a apple')
+	
 
 #funçâo responsavel para o uso da madeira
 func use_wood():
