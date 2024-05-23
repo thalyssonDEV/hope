@@ -1,3 +1,5 @@
+[gd_scene load_steps=67 format=3 uid="uid://dyxp6j01ctjmn"]
+
 [ext_resource type="Texture2D" uid="uid://c680uj4uc478v" path="res://assets/1 Tiles/Objetos/3 Objects2.0/Ridges/4.png" id="1_cshfi"]
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="1_lxgju"]
 [ext_resource type="Texture2D" uid="uid://dgj7dxur1ftb7" path="res://assets/1 Tiles/bloco_corro1.png" id="2_8fgn2"]
