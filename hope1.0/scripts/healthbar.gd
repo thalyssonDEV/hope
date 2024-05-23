@@ -9,6 +9,9 @@ var health = 100 : set = _set_health
 
 var approaching = false;
 
+func _ready() -> void:
+	Global.healthBarNode = self;
+
 func _process(delta):
 	if approaching:
 		var _diff = abs(damage_bar.value - health)

@@ -16,6 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var inv:Inv = preload("res://inventory/inventy_player.tres")
 
 func _ready():
+	Global.playernode = self
 	hp = Global.hp
 	print("Meu HP se tornou: %s." % [hp])
 	healthBar.init_health(hp)
