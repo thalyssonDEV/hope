@@ -14,6 +14,7 @@ func _on_body_entered(body):
 			elif slot[index].amount < madeira_camfire:
 				get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
+
 func procurarIndexSlot(name, slot):
 	for i in range(slot.size()):
 		if slot[i].item.name == name:

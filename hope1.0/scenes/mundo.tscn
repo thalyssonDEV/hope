@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://c8g27oks76n2i"]
+[gd_scene load_steps=80 format=3 uid="uid://c8g27oks76n2i"]
 
 [ext_resource type="Texture2D" uid="uid://b5tco2imqt6jg" path="res://assets/1 Tiles/Objetos/Grass1.png" id="1_g4k4y"]
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="2_3vehv"]
@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://dsp0ol55viio" path="res://scenes/apple_2.tscn" id="35_34300"]
 [ext_resource type="PackedScene" uid="uid://d7yk8pbykrtq" path="res://scenes/portal.tscn" id="38_r0iwn"]
 [ext_resource type="PackedScene" uid="uid://boifrmd3fyl6j" path="res://scenes/snake.tscn" id="41_no0nw"]
+[ext_resource type="PackedScene" uid="uid://bjh5glvmf2oup" path="res://scenes/madeira.tscn" id="42_8mnu7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uhkm"]
 texture = ExtResource("1_g4k4y")
@@ -1178,4 +1179,12 @@ position = Vector2(631, -88)
 position = Vector2(1500, 1)
 
 [node name="snake" parent="." instance=ExtResource("41_no0nw")]
-position = Vector2(767, 16)
+position = Vector2(555, 16)
+
+[node name="snake2" parent="." instance=ExtResource("41_no0nw")]
+position = Vector2(916, 16)
+
+[node name="madeiras" type="Node" parent="."]
+
+[node name="madeira" parent="madeiras" instance=ExtResource("42_8mnu7")]
+position = Vector2(822, -76)
