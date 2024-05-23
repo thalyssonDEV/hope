@@ -19,4 +19,3 @@ func procurarIndexSlot(name, slot):
 	for i in range(slot.size()):
 		if slot[i].item.name == name:
 			return i;
-	

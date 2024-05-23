@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvv8a3prb5ld3"]
+
+[ext_resource type="Texture2D" uid="uid://b1rxuuayflkjd" path="res://assets/Objetos/3 Objects2.0/Pointers/1.png" id="1_qpp25"]
+
+[sub_resource type="GDScript" id="GDScript_7ttor"]
+script/source = "extends Area2D
+
+class_name msg_gravetos
+
+func _on_body_entered(body):
+	if body is Player:
+		var ui = Global.uiNode
+		ui.visible = true
+
+		var _dialog_graveto: Array[String] = [
+			\"aaaaaaaaaaaaaaaaaa\"
+		]
+		ui.show_dialog(_dialog_graveto)
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia733"]
+atlas = ExtResource("1_qpp25")
+region = Rect2(0, 0, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ummap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia733")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2yfl"]
+size = Vector2(16, 38)
+
+[node name="msg_gravetos" type="Area2D"]
+script = SubResource("GDScript_7ttor")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ummap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_o2yfl")
+debug_color = Color(0, 0.623641, 0.404475, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
