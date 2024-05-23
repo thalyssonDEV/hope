@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://br8pfj4ugbm4c"]
+
+[ext_resource type="Texture2D" uid="uid://bvij6ixpga0et" path="res://assets/imagem/postapocalypse2.png" id="1_peykp"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("1_peykp")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -387.0
+offset_top = 197.0
+offset_right = -133.0
+offset_bottom = 376.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+horizontal_alignment = 1

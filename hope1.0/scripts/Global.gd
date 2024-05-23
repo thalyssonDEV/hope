@@ -4,4 +4,7 @@ var playerMaxHealth: int = 100
 var uiNode = null
 var itemDisplay = null;
 var invUi = null
+var playernode = null
+var maxhealth = 100
+var healthBarNode = null
 @onready var invPlay = preload("res://inventory/inventy_player.tres");

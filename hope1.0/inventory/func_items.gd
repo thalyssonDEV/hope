@@ -13,8 +13,9 @@ func use_item(item: String):
 
 #função responsavel para o uso da maça
 func use_apple():
-	print('use a apple')
-	
+	if Global.playernode.hp < Global.playerMaxHealth:
+		Global.playernode.hp = min(Global.playernode.hp + 15,Global.playerMaxHealth)
+		Global.healthBarNode.init_health(Global.playernode.hp)
 
 #funçâo responsavel para o uso da madeira
 func use_wood():
