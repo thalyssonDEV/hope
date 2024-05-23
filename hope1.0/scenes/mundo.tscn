@@ -42,7 +42,11 @@
 [ext_resource type="PackedScene" uid="uid://d7yk8pbykrtq" path="res://scenes/portal.tscn" id="38_r0iwn"]
 [ext_resource type="PackedScene" uid="uid://boifrmd3fyl6j" path="res://scenes/snake.tscn" id="41_no0nw"]
 [ext_resource type="PackedScene" uid="uid://bjh5glvmf2oup" path="res://scenes/madeira.tscn" id="42_8mnu7"]
+
+[ext_resource type="Texture2D" uid="uid://icy585ccdnnt" path="res://assets/mapa_da_floresta/nature_3/orig.png" id="43_yu04k"]
+
 [ext_resource type="PackedScene" uid="uid://dsjwmkfq6mixd" path="res://scenes/campfire.tscn" id="43_6lgd3"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uhkm"]
 texture = ExtResource("1_g4k4y")
@@ -1118,7 +1122,8 @@ sources/4 = SubResource("TileSetAtlasSource_uecx0")
 sources/5 = SubResource("TileSetAtlasSource_nltmw")
 
 [node name="mundo" type="Node2D"]
-metadata/_edit_vertical_guides_ = [1489.0]
+position = Vector2(555, -17)
+metadata/_edit_vertical_guides_ = [1489.0, 2090.0, 2048.0]
 
 [node name="decoraçoes_colidiveis" type="TileMap" parent="."]
 texture_filter = 1
@@ -1156,25 +1161,26 @@ position = Vector2(3, -145)
 [node name="UI" parent="." instance=ExtResource("30_jy6kk")]
 visible = false
 
-[node name="apples" type="Node" parent="."]
+[node name="apples" type="Node2D" parent="."]
+position = Vector2(-561, -3)
 
 [node name="apple" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(117, -88)
+position = Vector2(680, -88)
 
 [node name="apple2" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(149, -102)
+position = Vector2(712, -102)
 
 [node name="apple3" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(173, -73)
+position = Vector2(736, -73)
 
 [node name="apple4" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(537, -90)
+position = Vector2(1100, -90)
 
 [node name="apple5" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(572, -129)
+position = Vector2(1135, -129)
 
 [node name="apple6" parent="apples" instance=ExtResource("35_34300")]
-position = Vector2(631, -88)
+position = Vector2(1194, -88)
 
 [node name="Portal" parent="." instance=ExtResource("38_r0iwn")]
 position = Vector2(1500, 1)
@@ -1188,6 +1194,20 @@ position = Vector2(916, 16)
 [node name="madeiras" type="Node" parent="."]
 
 [node name="madeira" parent="madeiras" instance=ExtResource("42_8mnu7")]
+position = Vector2(1376, -96)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="NinePatchRect" parent="ParallaxLayer"]
+z_index = -1
+texture_filter = 1
+offset_left = -540.0
+offset_top = -401.0
+offset_right = 1536.0
+offset_bottom = 67.0
+texture = ExtResource("43_yu04k")
+axis_stretch_horizontal = 1
+
 position = Vector2(822, -76)
 
 [node name="campfire" parent="." instance=ExtResource("43_6lgd3")]

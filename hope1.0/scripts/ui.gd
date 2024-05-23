@@ -2,7 +2,7 @@ extends CanvasLayer
 @onready var label = $Panel/Label
 
 #Criando Array de Diálogo
-var dialogo:Array[String] = [""]
+var dialogo:Array[String] = ["Ice Map"]
 
 var index_control_dialogo = 0
 
