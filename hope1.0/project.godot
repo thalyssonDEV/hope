@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+FuncItems="*res://inventory/func_items.gd"
 
 [display]
 

@@ -1,7 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmmrxb6gdir7u"]
+[gd_scene load_steps=8 format=3 uid="uid://dmmrxb6gdir7u"]
 
 [ext_resource type="Texture2D" uid="uid://3sqo0f0tjahu" path="res://assets/inventory_sprites/inventory-slot.png" id="1_0p4n5"]
 [ext_resource type="Script" path="res://inventory/item_display.gd" id="2_t2hv2"]
+[ext_resource type="Script" path="res://inventory/script_Button.gd" id="3_0wux5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0r0j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xfko"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk5tm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvvpt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Panel" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -35,3 +52,16 @@ offset_bottom = 23.0
 scale = Vector2(0.5, 0.5)
 text = "99"
 horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_i0r0j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4xfko")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uk5tm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bvvpt")
+script = ExtResource("3_0wux5")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
