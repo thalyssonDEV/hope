@@ -37,9 +37,9 @@ func _set_health(new_health):
 func init_health(_health):
 	print("Executando init_health")
 	health = _health
-	max_value = health
+	max_value = Global.playerMaxHealth
 	value = health
-	damage_bar.max_value = health
+	damage_bar.max_value = Global.playerMaxHealth
 	damage_bar.value = health
 
 

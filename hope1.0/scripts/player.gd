@@ -6,8 +6,8 @@ const JUMP_VELOCITY = -300.0
 
 ## Quantidade de pontos de vida.
 var hp: int = 100;
-
-@onready var healthBar = get_node("Healthbar")
+var direction
+@onready var healthBar: HealthBar = get_node("Healthbar")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -15,13 +15,18 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation:AnimatedSprite2D = $Sprite
 var inv:Inv = preload("res://inventory/inventy_player.tres")
 
-
+func _ready():
+	hp = Global.hp
+	print("Meu HP se tornou: %s." % [hp])
+	healthBar.init_health(hp)
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		animation.play("jump")
-	var can_move = !Global.uiNode.visible
+	
+	var can_move = !Global.uiNode.visible 
 	# Handle jump.
 	if can_move:
 		if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -29,7 +34,11 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("left", "right")
+	if hp <= 0:
+		direction = null
+		velocity.y = 0
+	else:
+		direction = Input.get_axis("left", "right")
 
 	if direction and can_move:
 		velocity.x = direction * SPEED
@@ -44,6 +53,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	# Atualizar informação de HP na GLobal
+	Global.hp = hp
+	
 func player():
 	pass
 
@@ -55,5 +67,6 @@ func takeDamage(amount):
 	healthBar._set_health(hp - amount)
 	hp -= amount;
 	if hp <= 0:
-		await get_tree().create_timer(2)
-		hp = 0;
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_file("res://scenes/mundo.tscn")
+		Global.hp = 100
