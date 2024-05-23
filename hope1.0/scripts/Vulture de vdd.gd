@@ -7,13 +7,13 @@ const SPEED = 120.0
 
 var direction = 1
 
-@onready var ray_cast_right = $RayCast_right
-@onready var ray_cast_left = $RayCast_left
+@onready var ray_cast_rightt  = $RayCast_right
+@onready var ray_cast_leftt = $RayCast_left
 
 func _process(delta):
-		if ray_cast_right.is_colliding():
+		if ray_cast_rightt.is_colliding():
 			direction = -1
-		if ray_cast_left.is_colliding():
+		if ray_cast_leftt.is_colliding():
 			direction = 1
 		position.x += direction * SPEED * delta
 		if direction > 0:

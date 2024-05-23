@@ -54,7 +54,7 @@ scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_0q12j")
 animation = &"run_vulture"
 autoplay = "run_vulture"
-frame_progress = 0.774101
+frame_progress = 0.579103
 
 [node name="Area2D" type="Area2D" parent="Vulture de vdd"]
 
