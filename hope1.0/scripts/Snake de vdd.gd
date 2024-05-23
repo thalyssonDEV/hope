@@ -1,11 +1,10 @@
 extends CharacterBody2D
-class_name Snake
+class_name Hyena
 @onready var player = $"."
-@onready var animation_snake = $AnimatedSprite2D
+@onready var animation_hyena = $AnimatedSprite2D
 
 
-
-var damage = 30;
+var damage = 25;
 const SPEED = 150.0
 
 var direction = 1
@@ -20,11 +19,10 @@ func _process(delta):
 			direction = 1
 		position.x += direction * SPEED * delta
 		if direction > 0:
-			animation_snake.flip_h = true
+			animation_hyena.flip_h = true
 		if direction < 0:
-			animation_snake.flip_h = false
-			
-## Acionado quando um corpo entra em contato com a hiena.
+			animation_hyena.flip_h = false
+		
 func _on_area_2d_body_entered(body):
 	if body is Player:
 		body.takeDamage(damage)
