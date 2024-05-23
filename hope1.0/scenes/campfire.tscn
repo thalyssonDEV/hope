@@ -101,23 +101,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1tgvl"]
-radius = 9.0
-height = 40.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsq3d"]
+size = Vector2(28, 56)
 
 [node name="campfire" type="Area2D"]
 script = ExtResource("1_oo4vs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, 1)
+position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_8fqjq")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.926098
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 14)
-shape = SubResource("CapsuleShape2D_1tgvl")
+position = Vector2(3, -28)
+shape = SubResource("RectangleShape2D_nsq3d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

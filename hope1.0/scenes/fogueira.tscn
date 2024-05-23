@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dh0blt3uev804"]
+[gd_scene load_steps=10 format=3 uid="uid://uimqs1t4ffar"]
 
 [ext_resource type="Texture2D" uid="uid://cu50suf34ho72" path="res://assets/items/2 Campfire/2.png" id="1_2abke"]
 
@@ -59,11 +59,12 @@ size = Vector2(26, 23)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(1, -16)
 sprite_frames = SubResource("SpriteFrames_d1rk4")
 animation = &"anim_fogueira"
 autoplay = "anim_fogueira"
 frame_progress = 0.00538603
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_6afv2")
