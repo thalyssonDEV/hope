@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://xpue2famluf0"]
+
+[ext_resource type="Script" path="res://scripts/Vulture de vdd.gd" id="1_iidtx"]
+[ext_resource type="Texture2D" uid="uid://cav4wlim4o6bf" path="res://assets/Sprites Enemies/4 Vulture/Vulture_walk.png" id="1_nkw5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgds7"]
+atlas = ExtResource("1_nkw5y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jil8"]
+atlas = ExtResource("1_nkw5y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdixr"]
+atlas = ExtResource("1_nkw5y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpfw1"]
+atlas = ExtResource("1_nkw5y")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q12j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgds7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jil8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdixr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpfw1")
+}],
+"loop": true,
+"name": &"run_vulture",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5t3d"]
+size = Vector2(26, 17)
+
+[node name="Vulture" type="Node2D"]
+
+[node name="Vulture de vdd" type="CharacterBody2D" parent="."]
+script = ExtResource("1_iidtx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vulture de vdd"]
+texture_filter = 1
+position = Vector2(-4, -10)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_0q12j")
+animation = &"run_vulture"
+autoplay = "run_vulture"
+frame_progress = 0.774101
+
+[node name="Area2D" type="Area2D" parent="Vulture de vdd"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vulture de vdd/Area2D"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_s5t3d")
+debug_color = Color(0.960129, 0.134611, 0.38017, 0.42)
+
+[node name="RayCast_left" type="RayCast2D" parent="Vulture de vdd"]
+position = Vector2(0, -2)
+target_position = Vector2(-17, 0)
+collision_mask = 8
+
+[node name="RayCast_right" type="RayCast2D" parent="Vulture de vdd"]
+position = Vector2(0, -2)
+target_position = Vector2(12, 0)
+collision_mask = 8
+
+[connection signal="body_entered" from="Vulture de vdd/Area2D" to="Vulture de vdd" method="_on_area_2d_body_entered"]
