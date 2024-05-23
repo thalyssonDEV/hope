@@ -55,5 +55,4 @@ func takeDamage(amount):
 	healthBar._set_health(hp - amount)
 	hp -= amount;
 	if hp <= 0:
-		hp = 0;	
-		print("Morri.")
+		hp = 0;

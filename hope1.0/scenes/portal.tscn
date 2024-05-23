@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d7yk8pbykrtq"]
+
+[sub_resource type="GDScript" id="GDScript_ufaoo"]
+resource_name = "portal"
+script/source = "extends Area2D
+
+func _on_body_entered(body):
+	
+	if body.is_in_group(\"player\"):
+		get_tree().change_scene_to_file(\"res://scenes/mundo_2.tscn\")
+		
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k37y6"]
+size = Vector2(30, 44)
+
+[node name="Portal" type="Area2D"]
+script = SubResource("GDScript_ufaoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_k37y6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

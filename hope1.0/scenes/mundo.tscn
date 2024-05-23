@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://c8g27oks76n2i"]
+[gd_scene load_steps=73 format=3 uid="uid://c8g27oks76n2i"]
 
 [ext_resource type="Texture2D" uid="uid://bpvuhhrn30xrc" path="res://assets/1 Tiles/piso_neve_neve1.png" id="2_3vehv"]
 [ext_resource type="PackedScene" uid="uid://vlvpv0x8c1sp" path="res://scenes/player.tscn" id="2_6rvpy"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://b6x38e1c038v5" path="res://scenes/npc_neve.tscn" id="32_yarsb"]
 [ext_resource type="PackedScene" uid="uid://dcl72p4yrbx5e" path="res://scenes/hyena.tscn" id="33_o30sv"]
 [ext_resource type="PackedScene" uid="uid://dsp0ol55viio" path="res://scenes/apple_2.tscn" id="35_34300"]
+[ext_resource type="PackedScene" uid="uid://d7yk8pbykrtq" path="res://scenes/portal.tscn" id="38_r0iwn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i4gb"]
 texture = ExtResource("2_l4xxl")
@@ -1134,3 +1135,6 @@ position = Vector2(572, -129)
 
 [node name="apple6" parent="apples" instance=ExtResource("35_34300")]
 position = Vector2(631, -88)
+
+[node name="Portal" parent="." instance=ExtResource("38_r0iwn")]
+position = Vector2(1500, 1)
