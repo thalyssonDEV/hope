@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yhqqnkhyvgvd"
-path="res://.godot/imported/Grass4.png-f39b6882d9321c581df3ba40e36ed572.ctex"
+uid="uid://dslyq63g0g6jr"
+path="res://.godot/imported/Snake_attack.png-8f70ad75ebec991dc7c8fa8adf51e952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1 Tiles/Objetos/Grass4.png"
-dest_files=["res://.godot/imported/Grass4.png-f39b6882d9321c581df3ba40e36ed572.ctex"]
+source_file="res://assets/Sprites Enemies/1 Snake/Snake_attack.png"
+dest_files=["res://.godot/imported/Snake_attack.png-8f70ad75ebec991dc7c8fa8adf51e952.ctex"]
 
 [params]
 

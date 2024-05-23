@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://boifrmd3fyl6j"]
+
+[ext_resource type="Script" path="res://scripts/Snake de vdd.gd" id="1_bcsaa"]
+[ext_resource type="Texture2D" uid="uid://bm8ogbxgp476q" path="res://assets/Sprites Enemies/1 Snake/Snake_walk.png" id="1_ocmjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgm52"]
+atlas = ExtResource("1_ocmjn")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl8m3"]
+atlas = ExtResource("1_ocmjn")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2ryw"]
+atlas = ExtResource("1_ocmjn")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kyln"]
+atlas = ExtResource("1_ocmjn")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a24nd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgm52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl8m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2ryw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kyln")
+}],
+"loop": true,
+"name": &"run_snake",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgocb"]
+size = Vector2(22, 10)
+
+[node name="snake" type="Node2D"]
+
+[node name="Snake de vdd" type="CharacterBody2D" parent="."]
+script = ExtResource("1_bcsaa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Snake de vdd"]
+texture_filter = 1
+position = Vector2(-5, -24)
+sprite_frames = SubResource("SpriteFrames_a24nd")
+animation = &"run_snake"
+autoplay = "run_snake"
+frame_progress = 0.269448
+
+[node name="Area2D" type="Area2D" parent="Snake de vdd"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snake de vdd/Area2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_hgocb")
+debug_color = Color(0.94097, 0.192849, 0.38387, 0.42)
+
+[node name="RayCast_left" type="RayCast2D" parent="Snake de vdd"]
+position = Vector2(0, -5)
+target_position = Vector2(-13, 0)
+collision_mask = 8
+
+[node name="RayCast_right" type="RayCast2D" parent="Snake de vdd"]
+position = Vector2(0, -5)
+target_position = Vector2(11, 0)
+collision_mask = 8
+
+[connection signal="body_entered" from="Snake de vdd/Area2D" to="Snake de vdd" method="_on_area_2d_body_entered"]
