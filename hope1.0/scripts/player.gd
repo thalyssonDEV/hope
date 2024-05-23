@@ -55,4 +55,5 @@ func takeDamage(amount):
 	healthBar._set_health(hp - amount)
 	hp -= amount;
 	if hp <= 0:
+		await get_tree().create_timer(2)
 		hp = 0;
