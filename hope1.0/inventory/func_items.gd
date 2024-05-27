@@ -11,7 +11,6 @@ func use_item(item: String) -> bool:
 	var func_ref: Callable = Items_funcs.get(item)
 	return func_ref.call()
 	
-
 #função responsavel para o uso da maça
 func use_apple() -> bool:
 	if Global.playernode.hp < Global.playerMaxHealth:
