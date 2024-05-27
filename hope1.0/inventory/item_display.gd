@@ -26,3 +26,9 @@ func update(slot : InvSlot):
 		if slot.amount > 1:
 			amount_text.visible = true
 		amount_text.text = str(slot.amount)
+			
+	if slot.amount <= 0:
+		print("item slot menor ou igual a zero")
+		item_visual.visible = false
+		$Button.disabled = true
+		amount_text.visible = false
