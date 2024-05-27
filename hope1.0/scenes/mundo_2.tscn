@@ -8045,3 +8045,9 @@ offset_right = 1622.0
 offset_bottom = 100.0
 texture = ExtResource("48_p1kg1")
 axis_stretch_horizontal = 1
+
+[node name="madeira" parent="." instance=ExtResource("33_pndo1")]
+position = Vector2(658, -148)
+
+[node name="madeira2" parent="." instance=ExtResource("33_pndo1")]
+position = Vector2(171, -45)
