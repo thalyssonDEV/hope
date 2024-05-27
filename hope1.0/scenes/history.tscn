@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6ke67ytc7jqf"]
 
-[ext_resource type="Texture2D" uid="uid://bvij6ixpga0et" path="res://assets/imagem/postapocalypse2.png" id="1_d4m7h"]
-[ext_resource type="FontFile" uid="uid://df3cii8l6pj06" path="res://assets/fonts/connection/Connection.otf" id="2_7xewj"]
-[ext_resource type="FontFile" uid="uid://cgpu4qv1f5a0l" path="res://assets/fonts/connection/ConnectionBold.otf" id="2_lcyvw"]
-[ext_resource type="Script" path="res://Button.gd" id="3_lngq2"]
+[ext_resource type="Texture2D" uid="uid://bvij6ixpga0et" path="res://assets/imagem/postapocalypse2.png" id="1_7drdr"]
+[ext_resource type="FontFile" uid="uid://df3cii8l6pj06" path="res://assets/fonts/connection/Connection.otf" id="2_gy2le"]
+[ext_resource type="FontFile" uid="uid://cgpu4qv1f5a0l" path="res://assets/fonts/connection/ConnectionBold.otf" id="3_3hgnb"]
+[ext_resource type="Script" path="res://scripts/Button.gd" id="4_g137t"]
 
 [sub_resource type="Theme" id="Theme_vxywt"]
 default_font_size = 34
@@ -21,7 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-texture = ExtResource("1_d4m7h")
+texture = ExtResource("1_7drdr")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -210.0
@@ -29,7 +29,7 @@ offset_top = 83.0
 offset_right = 882.0
 offset_bottom = 262.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("2_7xewj")
+theme_override_fonts/font = ExtResource("2_gy2le")
 text = "  100 years after a nuclear war, the last inhabitants of Earth are struggling to survive, 
 among them Edward, who, after losing his family to starvation, 
 has decided to follow an uncertain path in search of an unknown destination, 
@@ -55,9 +55,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 theme = SubResource("Theme_vxywt")
-theme_override_fonts/font = ExtResource("2_lcyvw")
+theme_override_fonts/font = ExtResource("3_3hgnb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jm6g7")
 text = "EXIT"
-script = ExtResource("3_lngq2")
+script = ExtResource("4_g137t")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcljelqyv4qwt"]
+
+[ext_resource type="FontFile" uid="uid://df3cii8l6pj06" path="res://assets/fonts/connection/Connection.otf" id="1_a3bld"]
+
+[node name="Continue" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.252028, 0.252028, 0.252028, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 462.0
+offset_top = 264.0
+offset_right = 531.0
+offset_bottom = 287.0
+scale = Vector2(3.5, 3.5)
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_a3bld")
+text = "continue..."
