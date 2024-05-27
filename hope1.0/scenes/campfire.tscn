@@ -109,14 +109,13 @@ script = ExtResource("1_oo4vs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -32)
+position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_8fqjq")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.926098
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, -28)
+position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_nsq3d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
