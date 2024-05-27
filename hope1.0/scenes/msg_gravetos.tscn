@@ -13,7 +13,8 @@ func _on_body_entered(body):
 		ui.visible = true
 
 		var _dialog_graveto: Array[String] = [
-			\"aaaaaaaaaaaaaaaaaa\"
+			\"Você: Está muito frio, preciso de DEZ gravetos
+			 pra acender essa fogueira\"
 		]
 		ui.show_dialog(_dialog_graveto)
 "
