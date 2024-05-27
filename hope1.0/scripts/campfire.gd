@@ -15,6 +15,7 @@ func _on_body_entered(body):
 			if slot[index].amount >= madeira_camfire:
 				animation_campfire.play("fire")
 			elif slot[index].amount < madeira_camfire:
+				Global.hp = 100
 				get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 func procurarIndexSlot(_name,slot) -> int:
