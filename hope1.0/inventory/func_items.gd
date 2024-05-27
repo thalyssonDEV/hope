@@ -24,3 +24,4 @@ func use_apple() -> bool:
 #funçâo responsavel para o uso da madeira
 func use_wood():
 	print('collect wood')
+	return 0;
