@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvv8a3prb5ld3"]
+[gd_scene load_steps=6 format=3 uid="uid://bi5vwii5gipew"]
 
 [ext_resource type="Texture2D" uid="uid://b1rxuuayflkjd" path="res://assets/Objetos/3 Objects2.0/Pointers/1.png" id="1_qpp25"]
 
@@ -34,7 +34,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2yfl"]
-size = Vector2(16, 38)
+size = Vector2(16, 58)
 
 [node name="msg_gravetos" type="Area2D"]
 script = SubResource("GDScript_7ttor")
@@ -44,7 +44,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ummap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_o2yfl")
 debug_color = Color(0, 0.623641, 0.404475, 0.42)
 

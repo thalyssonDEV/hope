@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://2yusrqj2ayvs"]
+
+[ext_resource type="Script" path="res://scripts/ui_graveto.gd" id="1_7yy33"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_7yy33")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 199.0
+offset_top = 243.0
+offset_right = 677.0
+offset_bottom = 422.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 49.0
+offset_right = 348.0
+offset_bottom = 128.0
+text = "
+"
