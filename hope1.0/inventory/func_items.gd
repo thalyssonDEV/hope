@@ -7,15 +7,18 @@ var Items_funcs: Dictionary = {
 }
 
 #função responsavel por executar a função identificada pelo Items_funcs
-func use_item(item: String):
+func use_item(item: String) -> bool:
 	var func_ref: Callable = Items_funcs.get(item)
-	func_ref.call()
+	return func_ref.call()
+	
 
 #função responsavel para o uso da maça
-func use_apple():
+func use_apple() -> bool:
 	if Global.playernode.hp < Global.playerMaxHealth:
 		Global.playernode.hp = min(Global.playernode.hp + 15,Global.playerMaxHealth)
 		Global.healthBarNode.init_health(Global.playernode.hp)
+		return true;
+	return false;
 	
 
 #funçâo responsavel para o uso da madeira

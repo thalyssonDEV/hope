@@ -9,3 +9,10 @@ var maxhealth = 100
 var healthBarNode = null
 var slot_amount: int
 @onready var invPlay = preload("res://inventory/inventy_player.tres");
+
+##irá resetar o inventario
+func resete_inventario() -> void:
+	var slot = invPlay.slots
+	for item in range(slot.size()):
+		slot[item].amount = 0
+		slot[item].item = null 
