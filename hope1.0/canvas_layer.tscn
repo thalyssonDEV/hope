@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6ke67ytc7jqf"]
+
+[ext_resource type="Texture2D" uid="uid://bvij6ixpga0et" path="res://assets/imagem/postapocalypse2.png" id="1_d4m7h"]
+[ext_resource type="FontFile" uid="uid://df3cii8l6pj06" path="res://assets/fonts/connection/Connection.otf" id="2_7xewj"]
+[ext_resource type="FontFile" uid="uid://cgpu4qv1f5a0l" path="res://assets/fonts/connection/ConnectionBold.otf" id="2_lcyvw"]
+[ext_resource type="Script" path="res://Button.gd" id="3_lngq2"]
+
+[sub_resource type="Theme" id="Theme_vxywt"]
+default_font_size = 34
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm6g7"]
+bg_color = Color(0.174658, 0.701658, 0.492033, 1)
+
+[node name="history" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_d4m7h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -210.0
+offset_top = 83.0
+offset_right = 882.0
+offset_bottom = 262.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("2_7xewj")
+text = "  100 years after a nuclear war, the last inhabitants of Earth are struggling to survive, 
+among them Edward, who, after losing his family to starvation, 
+has decided to follow an uncertain path in search of an unknown destination, 
+all at the command of his father, who, before he died, warned of a place where 
+there was no war or pain, a place where everyone could find complete peace.
+  Determined to reach his goal and with nothing left to lose, Edward sets off in search of the city, 
+following a path with unknown dangers, making hope his only 
+driving force throughout the dangers that await him.
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 128.0
+offset_right = 22.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_vxywt")
+theme_override_fonts/font = ExtResource("2_lcyvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jm6g7")
+text = "EXIT"
+script = ExtResource("3_lngq2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
