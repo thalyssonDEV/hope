@@ -12,4 +12,9 @@ O jogo ***HOPE*** se passa em um mundo pós-apocalíptico e conta a história de
 > * Inimigos
 > * Interação com objetos
 
-> ### ***DESENVOLVEDOTRES***
+> ### ***DESENVOLVEDOTRES:***
+> * [thalyssonDEV](https://github.com/thalyssonDEV)
+> * [KaioGabriel-the](https://github.com/KaioGabriel-the)
+
+> ### ***GAME:***
+> [HOPE](https://kaio-gabriel-dev.itch.io/hope)
